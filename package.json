@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli-plugin-netlify-lambda",
+  "name": "vue-cli-plugin-netlify-lambda-webpack",
   "version": "0.1.0",
   "description": "Vue Cli plugin for adding Netlify Lambda",
   "main": "index.js",

@@ -1,9 +1,14 @@
-const { fork } = require('child_process')
+const {
+  fork
+} = require('child_process')
 const path = require('path')
 const lambdaBuild = require('netlify-lambda/lib/build')
 
 module.exports = (api, projectOptions) => {
-  const {build, serve} = api.service.commands;
+  const {
+    build,
+    serve
+  } = api.service.commands;
   const buildFn = build.fn;
   const serveFn = serve.fn;
   const webpackConfig = projectOptions.pluginOptions && projectOptions.pluginOptions.netlify && projectOptions.pluginOptions.netlify.webpackConfig;
@@ -14,9 +19,11 @@ module.exports = (api, projectOptions) => {
         buildFn(...args),
         lambdaBuild.run('src/lambda', webpackConfig),
       ]);
-      console.log(stats.toString({ color: true }));
+      console.log(stats.toString({
+        color: true
+      }));
       return res;
-    } catch (err) {
+    } catch (err) {
       console.error(err);
       process.exit(1);
     }

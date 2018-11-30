@@ -2,11 +2,13 @@
 
 > netlify-lambda plugin for vue-cli
 
+Modified fork that adds the ability to add webpack configuration.
+
 Sets up [netlify-lambda](https://github.com/netlify/netlify-lambda) for vue-cli projects to build and serve AWS lambda functions.
 
 ## Installing in an Already Created Project
 
-```
+```bash
 vue add netlify-lambda
 ```
 
@@ -21,4 +23,3 @@ Any js file added in `src/lambda` will be built as a lambda. It will be compiled
 When deployed to Netlify, the AWS lambda's are reachable under `/.netlify/functions/:name` - ie, the `hello.js` Lambda will be available under `/.netlify/functions/hello`.
 
 The plugin also sets up a proxy and runs the Lambdas locally, to simplify local development.
-
